@@ -5,6 +5,15 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    called_method
+  end
+
+  def called_method
+    1+1
+  end
+
+  def uncalled_method
+    puts 'never reached'
   end
 
   # GET /posts/1
