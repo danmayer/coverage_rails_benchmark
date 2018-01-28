@@ -12,6 +12,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+config/skylight.yml
+
+
 
 /node_modules
 /yarn-error.log
