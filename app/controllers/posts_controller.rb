@@ -6,10 +6,22 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     called_method
+    called_method_two
+    called_loop
   end
 
   def called_method
     1+1
+  end
+
+  def called_method_two
+    1+1
+  end
+
+  def called_loop
+    10.times do
+      1+1
+    end
   end
 
   def uncalled_method

@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+#git_source(:github) do |repo_name|
+ # repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+ # "https://github.com/#{repo_name}.git"
+#end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -50,9 +50,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'skylight'
-gem 'redis'
-gem 'coverband'
+gem 'redis', require: false
+gem 'coverband', require: false, :path => '/Users/danmayer/projects/coverband'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -8,3 +8,9 @@ Rails.application.load_tasks
 require 'coverband'
 Coverband.configure
 require 'coverband/tasks'
+
+desc "call coverage running"
+task :call_coverage_running do
+  require 'coverage'
+  Coverage.running?
+end
