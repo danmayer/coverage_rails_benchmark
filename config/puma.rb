@@ -52,5 +52,20 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # end
 #
 
+####
+# this only works in clustered mode
+# see hack in config/coverband.rb for single worker
+# I think this is only called on lead process as well and not all the threads
+###
+
+# on_worker_shutdown do
+#   Rails.logger.info "*"*50
+#   Rails.logger.info "shutdown"
+#   puts 'On worker shutdown...'
+#   Coverband::Collectors::Base.instance.start
+#   Coverband::Collectors::Base.instance.report_coverage
+# end
+
+
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
